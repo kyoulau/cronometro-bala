@@ -1,0 +1,51 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(98, 255, 255);
+}
+
+.container{
+    display: flex;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.button-component {
+    display: flex;
+    gap: 18px;
+    margin-top: 10px;
+}
+
+.img-cronomete{
+    width: 20%;
+    padding-top: 40px;
+}
+
+.cronometer{
+    height: 100px;
+    margin-top: -120px;
+}
+.number-cronometer{
+    font-size: 60px;
+    color: white;
+    margin-top: -120px;
+}
+
+.button{
+    margin-top: 20px;
+    width: 100px;
+    background-color: rgb(0, 212, 212);
+    font-size: 14px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 0.5px solid rgb(255, 255, 255);
+}
+
+.button:hover{
+    transition: all 0.50s;
+    opacity: 0.7s;
+    color: black;
+}
