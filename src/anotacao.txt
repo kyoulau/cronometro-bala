@@ -1,0 +1,53 @@
+O que são react hooks ?
+Uma nova nova de renderização de function components react para atualização de states
+
+usando Hooks podemos inicializar uma variavel e altera-lá usando a sintaxe:
+const [count, setCount] = useState(0);
+
+count irá começar como 0 e o método setCount será utulizada para mudar seu valor!
+
+function MyButton() {
+  const [count, setCount] = useState(0);
+
+  function handleClick() {
+    setCount(count + 1);
+  }
+
+  return (
+    <button onClick={handleClick}>
+      Clicado {count} vezes
+    </button>
+  );
+}
+
+para utilizar as props no react, utilizamos da seguinte forma
+export default function MyApp() {
+  const [count, setCount] = useState(0);
+
+  function handleClick() {
+    setCount(count + 1);
+  }
+
+  return (
+    <div>
+      <h1>Contadores que são atualizados juntos</h1>
+      <MyButton count={count} onClick={handleClick} />
+      <MyButton count={count} onClick={handleClick} />
+    </div>
+  );
+}
+
+function MyButton({ count, onClick }) {
+  return (
+    <button onClick={onClick}>
+      Clicado {count} vezes
+    </button>
+  );
+}
+
+
+useEffect -> substituto de componentDidMount, componentWillUnmount e componentDidUpdate
+Com ele podemos renderizar uma ação após o componente renderizar na tela
+
+useMemo -> função que executa quando determinada condição ocorrer, ele executa apenas 1 coisa
+useCallback -> Como o nome já diz, ela é uma função callback que só vai executar após uma determinada rotina ocorrer, diminuindo o tempo de processamento da memória, tendo 2 parametros obrigatórios
